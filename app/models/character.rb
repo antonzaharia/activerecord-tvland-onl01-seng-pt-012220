@@ -12,7 +12,7 @@ class Character < ActiveRecord::Base
   #   show.characters << self
   # end
   
-  def self.build_network(hash={})
+  def build_network(hash={})
     net = Network.new
     net.call_letters = hash.fetch(:call_letters)
     self.show.network = net
