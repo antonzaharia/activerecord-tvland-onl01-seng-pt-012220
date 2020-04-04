@@ -6,11 +6,11 @@ class Character < ActiveRecord::Base
     "#{self.name} always says: #{self.catchphrase}"
   end
   
-  def build_show(hash={})
-    show = Show.new
-    show.name = hash.fetch(:name)
-    show.characters << self
-  end
+  # def build_show(hash={})
+  #   show = Show.new
+  #   show.name = hash.fetch(:name)
+  #   show.characters << self
+  # end
   
   def self.build_network(hash={})
     net = Network.new
