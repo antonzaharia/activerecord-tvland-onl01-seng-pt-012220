@@ -15,7 +15,7 @@ class Character < ActiveRecord::Base
   def self.build_network(hash={})
     net = Network.new
     net.call_letters = hash.fetch(:call_letters)
-    
+    self.show.network = net
   end
 
 end
